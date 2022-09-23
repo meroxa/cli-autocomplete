@@ -29,7 +29,7 @@ const completionSpec: Fig.Spec = {
               name: "--path",
               description:
                 "Path to the app directory (default is local directory)",
-              args: { name: "path", template: "folders" },
+              args: { name: "path" },
             },
             {
               name: "--skip-collection-validation",
@@ -68,7 +68,7 @@ const completionSpec: Fig.Spec = {
               name: "--path",
               description:
                 "Path where application will be initialized (current directory as default)",
-              args: { name: "path", template: "folders" },
+              args: { name: "path" },
             },
             {
               name: "--skip-mod-init",
@@ -107,7 +107,7 @@ const completionSpec: Fig.Spec = {
             {
               name: "--path",
               description: "Path of application to run",
-              args: { name: "path", template: "folders" },
+              args: { name: "path" },
             },
           ],
         },
@@ -119,7 +119,7 @@ const completionSpec: Fig.Spec = {
               name: "--path",
               description:
                 "Path where application exists (current directory as default)",
-              args: { name: "path", template: "folders" },
+              args: { name: "path" },
             },
           ],
         },
@@ -670,7 +670,7 @@ const completionSpec: Fig.Spec = {
       name: "--cli-config-file",
       description: "Meroxa configuration file",
       isPersistent: true,
-      args: { name: "cli-config-file", template: "filepaths" },
+      args: { name: "cli-config-file" },
     },
     {
       name: "--debug",
