@@ -29,20 +29,6 @@ const completionSpec: Fig.Spec = {
           description: "Deploy a Turbine Data Application",
           options: [
             {
-              name: "--docker-hub-access-token",
-              description:
-                "DockerHub access token to use to build and deploy the app",
-              hidden: true,
-              args: { name: "docker-hub-access-token" },
-            },
-            {
-              name: "--docker-hub-username",
-              description:
-                "DockerHub username to use to build and deploy the app",
-              hidden: true,
-              args: { name: "docker-hub-username" },
-            },
-            {
               name: "--env",
               description:
                 "Environment (name or UUID) where application will be deployed to",
@@ -52,7 +38,7 @@ const completionSpec: Fig.Spec = {
               name: "--path",
               description:
                 "Path to the app directory (default is local directory)",
-              args: { name: "path", template: "folders" },
+              args: { name: "path" },
             },
             {
               name: "--skip-collection-validation",
@@ -81,7 +67,7 @@ const completionSpec: Fig.Spec = {
               name: "--path",
               description:
                 "Path to the app directory (default is local directory)",
-              args: { name: "path", template: "folders" },
+              args: { name: "path" },
             },
           ],
         },
@@ -104,7 +90,7 @@ const completionSpec: Fig.Spec = {
               name: "--path",
               description:
                 "Path where application will be initialized (current directory as default)",
-              args: { name: "path", template: "folders" },
+              args: { name: "path" },
             },
             {
               name: "--skip-mod-init",
@@ -132,7 +118,7 @@ const completionSpec: Fig.Spec = {
               name: "--path",
               description:
                 "Path to the app directory (default is local directory)",
-              args: { name: "path", template: "folders" },
+              args: { name: "path" },
             },
           ],
         },
@@ -145,7 +131,7 @@ const completionSpec: Fig.Spec = {
               name: "--path",
               description:
                 "Path to the app directory (default is local directory)",
-              args: { name: "path", template: "folders" },
+              args: { name: "path" },
             },
           ],
         },
@@ -158,7 +144,7 @@ const completionSpec: Fig.Spec = {
               name: "--path",
               description:
                 "Path to the app directory (default is local directory)",
-              args: { name: "path", template: "folders" },
+              args: { name: "path" },
             },
           ],
         },
@@ -169,7 +155,7 @@ const completionSpec: Fig.Spec = {
             {
               name: "--path",
               description: "Path of application to run",
-              args: { name: "path", template: "folders" },
+              args: { name: "path" },
             },
           ],
         },
@@ -181,7 +167,7 @@ const completionSpec: Fig.Spec = {
               name: "--path",
               description:
                 "Path where application exists (current directory as default)",
-              args: { name: "path", template: "folders" },
+              args: { name: "path" },
             },
           ],
         },
@@ -471,6 +457,11 @@ const completionSpec: Fig.Spec = {
             },
             { name: "--ssl", description: "Use SSL" },
             {
+              name: "--token",
+              description: "API Token",
+              args: { name: "token" },
+            },
+            {
               name: ["--url", "-u"],
               description: "New resource url",
               args: { name: "url" },
@@ -695,7 +686,7 @@ const completionSpec: Fig.Spec = {
       name: "--cli-config-file",
       description: "Meroxa configuration file",
       isPersistent: true,
-      args: { name: "cli-config-file", template: "filepaths" },
+      args: { name: "cli-config-file" },
     },
     {
       name: "--debug",
